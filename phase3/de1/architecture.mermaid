@@ -1,0 +1,42 @@
+```mermaid
+flowchart LR
+
+    A["Daily Network Activity CSV"] --> B["Landing Zone"]
+    B --> C["Validation / Quality Gate"]
+    C -->|Accepted| D["Raw Zone"]
+    C -->|Rejected| R["Rejected / Quarantine"]
+
+    G["milano-grid.geojson"] --> H["Reference Zone"]
+
+    D --> E["Spark ETL"]
+    H --> E
+
+    E --> F["Processed Parquet"]
+
+    F --> W["Analytics Warehouse"]
+
+    W --> AG["hourly_grid_summary"]
+    W --> DG["daily_grid_summary"]
+    W --> HS["hotspots"]
+    W --> AL["network_alerts"]
+    W --> RK["risk_tables"]
+
+    O["Airflow"] -. orchestration .-> B
+    O -. orchestration .-> C
+    O -. orchestration .-> E
+    O -. orchestration .-> W
+
+    W --> API["FastAPI"]
+    API --> UI["React"]
+
+    W --> ML["ML"]
+    ML --> RK
+
+    API --> PH["Pipeline Health"]
+
+    W --> CL["Claude Assistant"]
+    ML --> CL
+    PH --> CL
+
+    CL --> EX["Operational Explanation"]
+```

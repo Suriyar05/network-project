@@ -1,0 +1,359 @@
+.network-summary {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #f8fafc;
+  color: #1e293b;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 22px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.summary-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.summary-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.as-of-section {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.as-of-section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.as-of-section label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.filter-select,
+.as-of-section input,
+.as-of-section select {
+  height: 38px;
+  padding: 0 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.filter-select {
+  min-width: 120px;
+}
+
+.as-of-section input:focus,
+.as-of-section select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.loading-state {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.error-message,
+.error-banner {
+  margin-bottom: 18px;
+  padding: 13px 16px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-banner {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  border: 1px solid #dbeafe;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.network-summary > div[style] {
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.08);
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: Inter, Arial, sans-serif;
+  background: #e2e8f0;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.15) !important;
+}
+
+.leaflet-control-zoom a {
+  width: 34px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f1f5f9 !important;
+  color: #2563eb !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+  padding: 3px 7px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.18);
+}
+
+.leaflet-popup-content {
+  margin: 13px 15px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.leaflet-popup-content strong {
+  color: #0f172a;
+}
+
+.leaflet-tooltip {
+  padding: 6px 9px;
+  border: none;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.2);
+}
+
+.results-section {
+  margin-top: 24px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.results-section h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.activity-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.activity-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.activity-table thead {
+  background: #f8fafc;
+}
+
+.activity-table th {
+  padding: 13px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.activity-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.activity-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.activity-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.activity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.activity-table td strong {
+  color: #0f172a;
+}
+
+.selected-row {
+  background: #eff6ff !important;
+}
+
+.selected-row td {
+  color: #1e40af;
+}
+
+.severity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.severity.normal,
+.severity.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.severity.medium,
+.severity.attention {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.severity.high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.severity.critical {
+  background: #7f1d1d;
+  color: #ffffff;
+}
+
+.explore-btn {
+  padding: 7px 13px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.explore-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.explore-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .network-summary {
+    padding: 15px;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .as-of-section {
+    align-items: stretch;
+  }
+
+  .as-of-section > div {
+    flex: 1;
+  }
+
+  .filter-select,
+  .as-of-section input,
+  .as-of-section select {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .network-summary {
+    padding: 10px;
+  }
+
+  .summary-header {
+    padding: 18px;
+  }
+
+  .summary-header h1 {
+    font-size: 23px;
+  }
+
+  .as-of-section {
+    flex-direction: column;
+  }
+
+  .results-section {
+    padding: 14px;
+  }
+}

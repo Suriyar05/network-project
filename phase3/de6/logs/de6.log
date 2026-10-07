@@ -1,0 +1,809 @@
+2026-08-31 11:24:40,900 | INFO | ============================================================
+2026-08-31 11:24:40,900 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:24:40,900 | INFO | ============================================================
+2026-08-31 11:24:40,900 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:24:40,901 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:24:40,901 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:24:40,901 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:24:40,903 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:24:40,903 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:24:40,904 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,082 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,258 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,412 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,542 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,697 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,837 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:41,966 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,106 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,260 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,410 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,560 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,671 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,784 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,888 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:24:42,983 | INFO | Source rows loaded: 1325474
+2026-08-31 11:24:42,992 | INFO | Source schema validation: PASS
+2026-08-31 11:24:43,271 | INFO | Source duplicate validation: PASS
+2026-08-31 11:24:43,272 | INFO | Source validation completed successfully.
+2026-08-31 11:24:43,272 | INFO | Creating warehouse tables...
+2026-08-31 11:24:43,292 | INFO | Warehouse tables created successfully.
+2026-08-31 11:24:43,292 | INFO | Loading dim_time...
+2026-08-31 11:24:43,323 | INFO | dim_time rows inserted: 144
+2026-08-31 11:24:43,323 | INFO | Loading dim_grid...
+2026-08-31 11:24:43,323 | INFO | Loading static Milan grid reference...
+2026-08-31 11:24:43,393 | INFO | Milan reference grids found: 10000
+2026-08-31 11:24:43,429 | INFO | dim_grid rows inserted: 9998
+2026-08-31 11:24:43,429 | INFO | Loading fact_network_activity...
+2026-08-31 11:24:57,456 | INFO | Fact rows inserted: 1325474
+2026-08-31 11:24:57,465 | INFO | Creating warehouse indexes...
+2026-08-31 11:24:58,138 | INFO | Warehouse indexes created.
+2026-08-31 11:24:58,138 | INFO | Running DE6 warehouse validation...
+2026-08-31 11:24:58,146 | INFO | Source row count: 1325474
+2026-08-31 11:24:58,146 | INFO | Fact row count: 1325474
+2026-08-31 11:24:58,146 | INFO | FACT ROW COUNT: PASS
+2026-08-31 11:24:58,154 | INFO | Observed source grids: 9998
+2026-08-31 11:24:58,154 | INFO | dim_grid rows: 9998
+2026-08-31 11:24:58,154 | INFO | DIM GRID COUNT: PASS
+2026-08-31 11:24:58,155 | INFO | DIM GRID DUPLICATE CHECK: PASS
+2026-08-31 11:24:58,156 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 11:24:58,287 | INFO | FOREIGN KEY VALIDATION: PASS
+2026-08-31 11:24:58,477 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 11:24:58,478 | INFO | All DE6 warehouse validations passed.
+2026-08-31 11:24:58,478 | INFO | ============================================================
+2026-08-31 11:24:58,479 | INFO | DE6 WAREHOUSE BUILD COMPLETED SUCCESSFULLY
+2026-08-31 11:24:58,479 | INFO | ============================================================
+2026-08-31 11:24:58,481 | INFO | Warehouse connection closed.
+2026-08-31 11:40:02,151 | INFO | ============================================================
+2026-08-31 11:40:02,151 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:40:02,152 | INFO | ============================================================
+2026-08-31 11:40:02,152 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:40:02,152 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:40:02,152 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:40:02,152 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:40:02,153 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:40:02,153 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:40:02,154 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,267 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,376 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,485 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,582 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,688 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,785 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,888 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:02,985 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,088 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,185 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,288 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,393 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,491 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,591 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:40:03,677 | INFO | Source rows loaded: 1325474
+2026-08-31 11:40:03,686 | INFO | Source schema validation: PASS
+2026-08-31 11:40:03,922 | INFO | Source duplicate validation: PASS
+2026-08-31 11:40:03,922 | INFO | Source validation completed successfully.
+2026-08-31 11:40:03,923 | INFO | Creating warehouse tables...
+2026-08-31 11:40:03,923 | INFO | Warehouse tables created successfully.
+2026-08-31 11:40:03,924 | INFO | Loading dim_time...
+2026-08-31 11:40:03,942 | INFO | Warehouse connection closed.
+2026-08-31 11:40:03,942 | ERROR | DE6 WAREHOUSE BUILD FAILED: Execution failed
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2614, in _execute_insert
+    conn.executemany(self.insert_statement(num_rows=1), data_list)
+sqlite3.IntegrityError: UNIQUE constraint failed: dim_time.time_key
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\main.py", line 20, in main
+    warehouse.run()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 1359, in run
+    self.load_dim_time()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 556, in load_dim_time
+    self.dim_time_df.to_sql(
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 3040, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 841, in to_sql
+    return pandas_sql.to_sql(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2923, in to_sql
+    return table.insert(chunksize, method)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 1122, in insert
+    num_inserted = exec_insert(conn, keys, chunk_iter)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2616, in _execute_insert
+    raise DatabaseError("Execution failed") from exc
+pandas.errors.DatabaseError: Execution failed
+2026-08-31 11:46:24,729 | INFO | ============================================================
+2026-08-31 11:46:24,730 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:46:24,730 | INFO | ============================================================
+2026-08-31 11:46:24,730 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:46:24,730 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:46:24,730 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:46:24,730 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:46:24,731 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:46:24,731 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:46:24,732 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:24,871 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:24,983 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,094 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,198 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,306 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,418 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,518 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,616 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,712 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,814 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:25,931 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:26,048 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:26,146 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:26,241 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:46:26,322 | INFO | Source rows loaded: 1325474
+2026-08-31 11:46:26,332 | INFO | Source schema validation: PASS
+2026-08-31 11:46:26,560 | INFO | Source duplicate validation: PASS
+2026-08-31 11:46:26,560 | INFO | Source validation completed successfully.
+2026-08-31 11:46:26,561 | INFO | Creating warehouse tables...
+2026-08-31 11:46:26,561 | INFO | Warehouse tables created successfully.
+2026-08-31 11:46:26,561 | INFO | Loading dim_time...
+2026-08-31 11:46:26,562 | INFO | Warehouse connection closed.
+2026-08-31 11:46:26,562 | ERROR | DE6 WAREHOUSE BUILD FAILED: dim_time DataFrame has not been created.
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\main.py", line 20, in main
+    warehouse.run()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 1370, in run
+    self.load_dim_time()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 520, in load_dim_time
+    raise RuntimeError(
+RuntimeError: dim_time DataFrame has not been created.
+2026-08-31 11:49:01,827 | INFO | ============================================================
+2026-08-31 11:49:01,827 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:49:01,828 | INFO | ============================================================
+2026-08-31 11:49:01,828 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:49:01,828 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:49:01,828 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:49:01,829 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:49:01,830 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:49:01,830 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:49:01,831 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:01,947 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,055 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,155 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,252 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,350 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,447 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,548 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,642 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,737 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,834 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:02,933 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:03,034 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:03,138 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:03,232 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:03,312 | INFO | Source rows loaded: 1325474
+2026-08-31 11:49:03,321 | INFO | Source schema validation: PASS
+2026-08-31 11:49:03,548 | INFO | Source duplicate validation: PASS
+2026-08-31 11:49:03,548 | INFO | Source validation completed successfully.
+2026-08-31 11:49:03,548 | INFO | Creating warehouse tables...
+2026-08-31 11:49:03,550 | INFO | Warehouse tables created successfully.
+2026-08-31 11:49:03,550 | INFO | Loading dim_time...
+2026-08-31 11:49:03,622 | INFO | Warehouse connection closed.
+2026-08-31 11:49:03,622 | ERROR | DE6 WAREHOUSE BUILD FAILED: Execution failed on sql 'DROP TABLE "dim_time"': FOREIGN KEY constraint failed
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2745, in execute
+    cur.execute(sql, *args)
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\main.py", line 20, in main
+    warehouse.run()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 1393, in run
+    self.load_dim_time()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 571, in load_dim_time
+    self.dim_time_df.to_sql(
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 3040, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 841, in to_sql
+    return pandas_sql.to_sql(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2922, in to_sql
+    table.create()
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 990, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2944, in drop_table
+    self.execute(drop_sql).close()
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2757, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'DROP TABLE "dim_time"': FOREIGN KEY constraint failed
+2026-08-31 11:49:26,050 | INFO | ============================================================
+2026-08-31 11:49:26,050 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:49:26,050 | INFO | ============================================================
+2026-08-31 11:49:26,050 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:49:26,051 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:49:26,051 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:49:26,051 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:49:26,051 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:49:26,052 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:49:26,052 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,157 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,283 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,401 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,502 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,612 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,716 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,822 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:26,919 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,016 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,116 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,217 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,338 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,441 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,536 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:49:27,616 | INFO | Source rows loaded: 1325474
+2026-08-31 11:49:27,627 | INFO | Source schema validation: PASS
+2026-08-31 11:49:27,861 | INFO | Source duplicate validation: PASS
+2026-08-31 11:49:27,861 | INFO | Source validation completed successfully.
+2026-08-31 11:49:27,862 | INFO | Creating warehouse tables...
+2026-08-31 11:49:27,862 | INFO | Warehouse tables created successfully.
+2026-08-31 11:49:27,862 | INFO | Loading dim_time...
+2026-08-31 11:49:27,933 | INFO | Warehouse connection closed.
+2026-08-31 11:49:27,934 | ERROR | DE6 WAREHOUSE BUILD FAILED: Execution failed on sql 'DROP TABLE "dim_time"': FOREIGN KEY constraint failed
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2745, in execute
+    cur.execute(sql, *args)
+sqlite3.IntegrityError: FOREIGN KEY constraint failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\main.py", line 20, in main
+    warehouse.run()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 1393, in run
+    self.load_dim_time()
+  File "C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse.py", line 571, in load_dim_time
+    self.dim_time_df.to_sql(
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 3040, in to_sql
+    return sql.to_sql(
+           ^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 841, in to_sql
+    return pandas_sql.to_sql(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2922, in to_sql
+    table.create()
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 990, in create
+    self.pd_sql.drop_table(self.name, self.schema)
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2944, in drop_table
+    self.execute(drop_sql).close()
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\suriya.r\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\sql.py", line 2757, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql 'DROP TABLE "dim_time"': FOREIGN KEY constraint failed
+2026-08-31 11:56:48,302 | INFO | ============================================================
+2026-08-31 11:56:48,303 | INFO | DE6 WAREHOUSE MODELLING STARTED
+2026-08-31 11:56:48,303 | INFO | ============================================================
+2026-08-31 11:56:48,303 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 11:56:48,303 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 11:56:48,304 | INFO | Database: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:56:48,304 | INFO | Connecting to SQLite warehouse...
+2026-08-31 11:56:48,304 | INFO | Warehouse connected: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 3\de6\warehouse\network_analytics.db
+2026-08-31 11:56:48,305 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 11:56:48,305 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,423 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,537 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,646 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,762 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,865 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:48,968 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,068 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,169 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,266 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,369 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,473 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,577 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,677 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,776 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 11:56:49,874 | INFO | Source rows loaded: 1325474
+2026-08-31 11:56:49,883 | INFO | Source schema validation: PASS
+2026-08-31 11:56:50,132 | INFO | Source duplicate validation: PASS
+2026-08-31 11:56:50,132 | INFO | Source validation completed successfully.
+2026-08-31 11:56:50,132 | INFO | Clearing previous warehouse tables...
+2026-08-31 11:56:50,284 | INFO | Previous warehouse tables cleared successfully.
+2026-08-31 11:56:50,284 | INFO | Creating warehouse tables...
+2026-08-31 11:56:50,301 | INFO | Warehouse tables created successfully.
+2026-08-31 11:56:50,301 | INFO | Building dim_time DataFrame...
+2026-08-31 11:56:50,344 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 11:56:50,344 | INFO | Loading dim_time...
+2026-08-31 11:56:50,351 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 11:56:50,351 | INFO | Loading dim_grid...
+2026-08-31 11:56:50,352 | INFO | Loading static Milan grid reference...
+2026-08-31 11:56:50,420 | INFO | Milan reference grids found: 10000
+2026-08-31 11:56:50,456 | INFO | dim_grid rows inserted: 9998
+2026-08-31 11:56:50,457 | INFO | Loading fact_network_activity...
+2026-08-31 11:57:04,216 | INFO | Fact rows inserted: 1325474
+2026-08-31 11:57:04,227 | INFO | Creating warehouse indexes...
+2026-08-31 11:57:05,414 | INFO | Warehouse indexes created successfully.
+2026-08-31 11:57:05,414 | INFO | Running DE6 warehouse validation...
+2026-08-31 11:57:05,422 | INFO | Source rows: 1325474
+2026-08-31 11:57:05,422 | INFO | Warehouse fact rows: 1325474
+2026-08-31 11:57:05,422 | INFO | FACT ROW COUNT: PASS
+2026-08-31 11:57:05,430 | INFO | Observed source grids: 9998
+2026-08-31 11:57:05,431 | INFO | dim_grid rows: 9998
+2026-08-31 11:57:05,431 | INFO | DIM GRID COUNT: PASS
+2026-08-31 11:57:05,432 | INFO | DIM GRID DUPLICATE CHECK: PASS
+2026-08-31 11:57:05,432 | INFO | DIM TIME DUPLICATE CHECK: PASS
+2026-08-31 11:57:05,436 | INFO | Source timestamps: 144
+2026-08-31 11:57:05,437 | INFO | dim_time rows: 144
+2026-08-31 11:57:05,437 | INFO | DIM TIME COUNT: PASS
+2026-08-31 11:57:05,437 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 11:57:05,437 | INFO | DIM GRID GEOMETRY REFERENCE: PASS
+2026-08-31 11:57:05,571 | INFO | FOREIGN KEY VALIDATION: PASS
+2026-08-31 11:57:05,748 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 11:57:05,880 | INFO | Source total_activity: 696088195.4201999903
+2026-08-31 11:57:05,881 | INFO | Warehouse total_activity: 696088195.4201618433
+2026-08-31 11:57:05,881 | INFO | Total activity difference: 0.0000381470
+2026-08-31 11:57:05,882 | INFO | Allowed tolerance: 0.0696088195
+2026-08-31 11:57:05,882 | INFO | TOTAL ACTIVITY VALIDATION: PASS
+2026-08-31 11:57:06,346 | INFO | Source top grid: 5161
+2026-08-31 11:57:06,347 | INFO | Warehouse top grid: 5161
+2026-08-31 11:57:06,347 | INFO | TOP GRID RECONCILIATION: PASS
+2026-08-31 11:57:06,348 | INFO | INDEX VALIDATION: PASS | 6 indexes
+2026-08-31 11:57:06,349 | INFO | All DE6 warehouse validations passed.
+2026-08-31 11:57:06,349 | INFO | ============================================================
+2026-08-31 11:57:06,349 | INFO | DE6 WAREHOUSE BUILD COMPLETED SUCCESSFULLY
+2026-08-31 11:57:06,349 | INFO | ============================================================
+2026-08-31 11:57:06,351 | INFO | Warehouse connection closed.
+2026-08-31 12:19:21,669 | INFO | ============================================================
+2026-08-31 12:19:21,670 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:19:21,670 | INFO | ============================================================
+2026-08-31 12:19:21,670 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:19:21,670 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:19:21,670 | INFO | MySQL host: localhost
+2026-08-31 12:19:21,670 | INFO | MySQL database: network_analytics
+2026-08-31 12:19:21,670 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:19:21,848 | INFO | MySQL connection successful.
+2026-08-31 12:19:21,848 | INFO | Database: network_analytics
+2026-08-31 12:19:21,848 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:19:21,849 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:21,955 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,061 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,162 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,258 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,356 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,458 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,565 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,671 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,771 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,878 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:22,985 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:23,094 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:23,201 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:23,304 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:19:23,401 | INFO | Source rows loaded: 1325474
+2026-08-31 12:19:23,409 | INFO | Source schema validation: PASS
+2026-08-31 12:19:23,651 | INFO | Source duplicate validation: PASS
+2026-08-31 12:19:23,652 | INFO | Source validation completed successfully.
+2026-08-31 12:19:23,652 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:19:23,668 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:19:23,668 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:19:23,801 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:19:23,801 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:19:23,838 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:19:23,838 | INFO | Loading dim_time...
+2026-08-31 12:19:23,863 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:19:23,863 | INFO | Loading dim_grid...
+2026-08-31 12:19:23,863 | INFO | Loading static Milan grid reference...
+2026-08-31 12:19:23,930 | INFO | Milan reference grids found: 10000
+2026-08-31 12:19:24,121 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:19:24,122 | INFO | Loading fact_network_activity...
+2026-08-31 12:19:24,311 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: You are trying to merge on datetime64[us, UTC+05:30] and datetime64[us] columns for key 'timestamp'. If you wish to proceed you should use pd.concat
+2026-08-31 12:19:24,311 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:21:40,299 | INFO | ============================================================
+2026-08-31 12:21:40,299 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:21:40,300 | INFO | ============================================================
+2026-08-31 12:21:40,300 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:21:40,300 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:21:40,300 | INFO | MySQL host: localhost
+2026-08-31 12:21:40,301 | INFO | MySQL database: network_analytics
+2026-08-31 12:21:40,301 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:21:40,415 | INFO | MySQL connection successful.
+2026-08-31 12:21:40,415 | INFO | Database: network_analytics
+2026-08-31 12:21:40,415 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:21:40,416 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:40,521 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:40,621 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:40,722 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:40,823 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:40,933 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,038 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,146 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,247 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,353 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,458 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,569 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,676 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,783 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,888 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:21:41,990 | INFO | Source rows loaded: 1325474
+2026-08-31 12:21:41,999 | INFO | Source schema validation: PASS
+2026-08-31 12:21:42,256 | INFO | Source duplicate validation: PASS
+2026-08-31 12:21:42,256 | INFO | Source validation completed successfully.
+2026-08-31 12:21:42,256 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:21:42,347 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:21:42,348 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:21:42,451 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:21:42,451 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:21:42,490 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:21:42,490 | INFO | Loading dim_time...
+2026-08-31 12:21:42,509 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:21:42,509 | INFO | Loading dim_grid...
+2026-08-31 12:21:42,509 | INFO | Loading static Milan grid reference...
+2026-08-31 12:21:42,580 | INFO | Milan reference grids found: 10000
+2026-08-31 12:21:42,794 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:21:42,794 | INFO | Loading fact_network_activity...
+2026-08-31 12:21:43,217 | INFO | Joining fact records to dim_time...
+2026-08-31 12:21:43,456 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: Some fact records could not match dim_time. Missing time keys: 1325474
+2026-08-31 12:21:43,458 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:23:39,478 | INFO | ============================================================
+2026-08-31 12:23:39,478 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:23:39,479 | INFO | ============================================================
+2026-08-31 12:23:39,479 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:23:39,479 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:23:39,479 | INFO | MySQL host: localhost
+2026-08-31 12:23:39,479 | INFO | MySQL database: network_analytics
+2026-08-31 12:23:39,479 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:23:39,595 | INFO | MySQL connection successful.
+2026-08-31 12:23:39,595 | INFO | Database: network_analytics
+2026-08-31 12:23:39,595 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:23:39,596 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:39,708 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:39,821 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:39,935 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,051 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,166 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,271 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,372 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,470 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,565 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,668 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,770 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,869 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:40,969 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:41,064 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:23:41,151 | INFO | Source rows loaded: 1325474
+2026-08-31 12:23:41,159 | INFO | Source schema validation: PASS
+2026-08-31 12:23:41,383 | INFO | Source duplicate validation: PASS
+2026-08-31 12:23:41,383 | INFO | Source validation completed successfully.
+2026-08-31 12:23:41,383 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:23:41,466 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:23:41,467 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:23:41,557 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:23:41,557 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:23:41,595 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:23:41,595 | INFO | Loading dim_time...
+2026-08-31 12:23:41,614 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:23:41,614 | INFO | Loading dim_grid...
+2026-08-31 12:23:41,614 | INFO | Loading static Milan grid reference...
+2026-08-31 12:23:41,682 | INFO | Milan reference grids found: 10000
+2026-08-31 12:23:41,869 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:23:41,869 | INFO | Loading fact_network_activity...
+2026-08-31 12:23:42,277 | INFO | dim_time timestamp validation: PASS
+2026-08-31 12:23:42,294 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 12:23:42,296 | INFO | dim_grid validation: PASS
+2026-08-31 12:23:42,296 | INFO | Joining fact records to dim_time...
+2026-08-31 12:23:42,510 | INFO | dim_time join: PASS
+2026-08-31 12:23:42,510 | INFO | Joining fact records to dim_grid...
+2026-08-31 12:23:42,511 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: "['grid_key'] not in index"
+2026-08-31 12:23:42,512 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:25:02,536 | INFO | ============================================================
+2026-08-31 12:25:02,537 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:25:02,537 | INFO | ============================================================
+2026-08-31 12:25:02,537 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:25:02,538 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:25:02,538 | INFO | MySQL host: localhost
+2026-08-31 12:25:02,538 | INFO | MySQL database: network_analytics
+2026-08-31 12:25:02,538 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:25:02,672 | INFO | MySQL connection successful.
+2026-08-31 12:25:02,672 | INFO | Database: network_analytics
+2026-08-31 12:25:02,672 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:25:02,673 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:02,798 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:02,912 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,022 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,128 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,236 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,335 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,435 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,532 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,627 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,725 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,824 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:03,921 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:04,022 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:04,117 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:25:04,201 | INFO | Source rows loaded: 1325474
+2026-08-31 12:25:04,209 | INFO | Source schema validation: PASS
+2026-08-31 12:25:04,443 | INFO | Source duplicate validation: PASS
+2026-08-31 12:25:04,444 | INFO | Source validation completed successfully.
+2026-08-31 12:25:04,444 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:25:04,536 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:25:04,537 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:25:04,636 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:25:04,637 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:25:04,674 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:25:04,674 | INFO | Loading dim_time...
+2026-08-31 12:25:04,694 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:25:04,694 | INFO | Loading dim_grid...
+2026-08-31 12:25:04,695 | INFO | Loading static Milan grid reference...
+2026-08-31 12:25:04,762 | INFO | Milan reference grids found: 10000
+2026-08-31 12:25:04,973 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:25:04,974 | INFO | Loading fact_network_activity...
+2026-08-31 12:25:05,357 | INFO | dim_time validation: PASS
+2026-08-31 12:25:05,374 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 12:25:05,374 | INFO | Joining fact records to dim_time...
+2026-08-31 12:25:05,574 | INFO | dim_time join: PASS
+2026-08-31 12:25:05,575 | INFO | Reading generated grid_key values from MySQL...
+2026-08-31 12:25:05,575 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: 'NetworkWarehouse' object has no attribute 'connection'
+2026-08-31 12:25:05,575 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:27:34,595 | INFO | ============================================================
+2026-08-31 12:27:34,595 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:27:34,595 | INFO | ============================================================
+2026-08-31 12:27:34,595 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:27:34,595 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:27:34,596 | INFO | MySQL host: localhost
+2026-08-31 12:27:34,596 | INFO | MySQL database: network_analytics
+2026-08-31 12:27:34,596 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:27:34,694 | INFO | MySQL connection successful.
+2026-08-31 12:27:34,694 | INFO | Database: network_analytics
+2026-08-31 12:27:34,695 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:27:34,695 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:34,803 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:34,912 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,016 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,123 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,227 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,331 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,429 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,527 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,624 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,726 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,829 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:35,931 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:36,030 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:36,127 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:27:36,211 | INFO | Source rows loaded: 1325474
+2026-08-31 12:27:36,220 | INFO | Source schema validation: PASS
+2026-08-31 12:27:36,451 | INFO | Source duplicate validation: PASS
+2026-08-31 12:27:36,452 | INFO | Source validation completed successfully.
+2026-08-31 12:27:36,452 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:27:36,544 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:27:36,544 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:27:36,678 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:27:36,679 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:27:36,716 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:27:36,716 | INFO | Loading dim_time...
+2026-08-31 12:27:36,736 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:27:36,736 | INFO | Loading dim_grid...
+2026-08-31 12:27:36,736 | INFO | Loading static Milan grid reference...
+2026-08-31 12:27:36,804 | INFO | Milan reference grids found: 10000
+2026-08-31 12:27:36,996 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:27:36,996 | INFO | Loading fact_network_activity...
+2026-08-31 12:27:37,395 | INFO | dim_time validation: PASS
+2026-08-31 12:27:37,413 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 12:27:37,413 | INFO | Joining fact records to dim_time...
+2026-08-31 12:27:37,626 | INFO | dim_time join: PASS
+2026-08-31 12:27:37,627 | INFO | Reading generated grid_key values from MySQL...
+2026-08-31 12:27:37,627 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: 'NetworkWarehouse' object has no attribute 'get_connection'
+2026-08-31 12:27:37,628 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:29:21,981 | INFO | ============================================================
+2026-08-31 12:29:21,982 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:29:21,982 | INFO | ============================================================
+2026-08-31 12:29:21,982 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:29:21,982 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:29:21,983 | INFO | MySQL host: localhost
+2026-08-31 12:29:21,983 | INFO | MySQL database: network_analytics
+2026-08-31 12:29:21,983 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:29:22,088 | INFO | MySQL connection successful.
+2026-08-31 12:29:22,088 | INFO | Database: network_analytics
+2026-08-31 12:29:22,088 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:29:22,089 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,190 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,290 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,390 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,484 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,598 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,707 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,814 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:22,924 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,027 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,145 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,267 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,390 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,534 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,657 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:29:23,752 | INFO | Source rows loaded: 1325474
+2026-08-31 12:29:23,761 | INFO | Source schema validation: PASS
+2026-08-31 12:29:24,036 | INFO | Source duplicate validation: PASS
+2026-08-31 12:29:24,036 | INFO | Source validation completed successfully.
+2026-08-31 12:29:24,037 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:29:24,129 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:29:24,129 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:29:24,234 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:29:24,235 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:29:24,275 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:29:24,275 | INFO | Loading dim_time...
+2026-08-31 12:29:24,295 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:29:24,295 | INFO | Loading dim_grid...
+2026-08-31 12:29:24,295 | INFO | Loading static Milan grid reference...
+2026-08-31 12:29:24,369 | INFO | Milan reference grids found: 10000
+2026-08-31 12:29:24,604 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:29:24,605 | INFO | Loading fact_network_activity...
+2026-08-31 12:29:25,027 | INFO | dim_time validation: PASS
+2026-08-31 12:29:25,046 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 12:29:25,047 | INFO | Joining fact records to dim_time...
+2026-08-31 12:29:25,265 | INFO | dim_time join: PASS
+2026-08-31 12:29:25,266 | INFO | Reading generated grid_key values from MySQL...
+2026-08-31 12:29:25,328 | INFO | dim_grid database validation: PASS | 9998 grids
+2026-08-31 12:29:25,329 | INFO | Joining fact records to dim_grid...
+2026-08-31 12:29:25,420 | INFO | dim_grid join: PASS
+2026-08-31 12:29:25,484 | INFO | Fact null validation: PASS
+2026-08-31 12:29:25,485 | INFO | SP3 source rows: 1325474
+2026-08-31 12:29:25,485 | INFO | Fact rows after joins: 1325474
+2026-08-31 12:29:25,485 | INFO | FACT ROW COUNT: PASS
+2026-08-31 12:29:25,527 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 12:29:25,528 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 12:29:25,528 | INFO | Writing fact_network_activity to MySQL...
+2026-08-31 12:31:41,263 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: 'NetworkWarehouse' object has no attribute 'connection'
+2026-08-31 12:31:41,265 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 12:33:14,997 | INFO | ============================================================
+2026-08-31 12:33:14,997 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 12:33:14,998 | INFO | ============================================================
+2026-08-31 12:33:14,998 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 12:33:14,998 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 12:33:14,998 | INFO | MySQL host: localhost
+2026-08-31 12:33:14,998 | INFO | MySQL database: network_analytics
+2026-08-31 12:33:14,998 | INFO | Connecting to MySQL warehouse...
+2026-08-31 12:33:15,104 | INFO | MySQL connection successful.
+2026-08-31 12:33:15,104 | INFO | Database: network_analytics
+2026-08-31 12:33:15,104 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 12:33:15,105 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,216 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,335 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,483 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,592 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,708 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,821 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:15,940 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,055 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,181 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,306 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,448 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,576 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,709 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,843 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 12:33:16,950 | INFO | Source rows loaded: 1325474
+2026-08-31 12:33:16,964 | INFO | Source schema validation: PASS
+2026-08-31 12:33:17,243 | INFO | Source duplicate validation: PASS
+2026-08-31 12:33:17,243 | INFO | Source validation completed successfully.
+2026-08-31 12:33:17,243 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 12:33:17,502 | INFO | Previous warehouse tables cleared.
+2026-08-31 12:33:17,502 | INFO | Creating MySQL warehouse tables...
+2026-08-31 12:33:17,581 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 12:33:17,581 | INFO | Creating dim_time DataFrame...
+2026-08-31 12:33:17,633 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 12:33:17,635 | INFO | Loading dim_time...
+2026-08-31 12:33:17,656 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 12:33:17,657 | INFO | Loading dim_grid...
+2026-08-31 12:33:17,657 | INFO | Loading static Milan grid reference...
+2026-08-31 12:33:17,757 | INFO | Milan reference grids found: 10000
+2026-08-31 12:33:18,015 | INFO | dim_grid rows inserted: 9998
+2026-08-31 12:33:18,015 | INFO | Loading fact_network_activity...
+2026-08-31 12:33:18,509 | INFO | dim_time validation: PASS
+2026-08-31 12:33:18,534 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 12:33:18,534 | INFO | Joining fact records to dim_time...
+2026-08-31 12:33:18,769 | INFO | dim_time join: PASS
+2026-08-31 12:33:18,770 | INFO | Reading generated grid_key values from MySQL...
+2026-08-31 12:33:18,850 | INFO | dim_grid database validation: PASS | 9998 grids
+2026-08-31 12:33:18,853 | INFO | Joining fact records to dim_grid...
+2026-08-31 12:33:18,971 | INFO | dim_grid join: PASS
+2026-08-31 12:33:19,043 | INFO | Fact null validation: PASS
+2026-08-31 12:33:19,044 | INFO | SP3 source rows: 1325474
+2026-08-31 12:33:19,044 | INFO | Fact rows after joins: 1325474
+2026-08-31 12:33:19,044 | INFO | FACT ROW COUNT: PASS
+2026-08-31 12:33:19,099 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 12:33:19,100 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 12:33:19,100 | INFO | Writing fact_network_activity to MySQL...
+2026-08-31 12:37:45,617 | ERROR | DE6 MYSQL WAREHOUSE BUILD FAILED: 'NetworkWarehouse' object has no attribute 'connection'
+2026-08-31 12:37:45,618 | INFO | MySQL warehouse connection pool closed.
+2026-08-31 13:19:15,382 | INFO | ============================================================
+2026-08-31 13:19:15,384 | INFO | DE6 MYSQL WAREHOUSE MODELLING STARTED
+2026-08-31 13:19:15,385 | INFO | ============================================================
+2026-08-31 13:19:15,385 | INFO | SP3 source: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\output\sp3\hourly_grid_summary
+2026-08-31 13:19:15,385 | INFO | Grid reference: C:\Users\suriya.r\Documents\Network operations and predictive intelligence system\phase 2\data\reference\milano-grid.geojson
+2026-08-31 13:19:15,385 | INFO | MySQL host: localhost
+2026-08-31 13:19:15,385 | INFO | MySQL database: network_analytics
+2026-08-31 13:19:15,386 | INFO | Connecting to MySQL warehouse...
+2026-08-31 13:19:15,567 | INFO | MySQL connection successful.
+2026-08-31 13:19:15,568 | INFO | Database: network_analytics
+2026-08-31 13:19:15,568 | INFO | Loading SP3 hourly_grid_summary...
+2026-08-31 13:19:15,570 | INFO | Reading: part-00000-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:15,758 | INFO | Reading: part-00001-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:15,961 | INFO | Reading: part-00002-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:16,144 | INFO | Reading: part-00003-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:16,346 | INFO | Reading: part-00004-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:16,558 | INFO | Reading: part-00005-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:16,737 | INFO | Reading: part-00006-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:16,948 | INFO | Reading: part-00007-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:17,141 | INFO | Reading: part-00008-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:17,358 | INFO | Reading: part-00009-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:17,563 | INFO | Reading: part-00010-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:17,773 | INFO | Reading: part-00011-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:17,967 | INFO | Reading: part-00012-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:18,166 | INFO | Reading: part-00013-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:18,351 | INFO | Reading: part-00014-c2dee6ae-6dfd-4fad-82b6-e2b2c7e0054a-c000.csv
+2026-08-31 13:19:18,519 | INFO | Source rows loaded: 1325474
+2026-08-31 13:19:18,549 | INFO | Source schema validation: PASS
+2026-08-31 13:19:18,925 | INFO | Source duplicate validation: PASS
+2026-08-31 13:19:18,925 | INFO | Source validation completed successfully.
+2026-08-31 13:19:18,926 | INFO | Clearing previous MySQL warehouse...
+2026-08-31 13:19:19,243 | INFO | Previous warehouse tables cleared.
+2026-08-31 13:19:19,243 | INFO | Creating MySQL warehouse tables...
+2026-08-31 13:19:19,369 | INFO | MySQL warehouse tables created successfully.
+2026-08-31 13:19:19,370 | INFO | Creating dim_time DataFrame...
+2026-08-31 13:19:19,436 | INFO | dim_time DataFrame created: 144 rows
+2026-08-31 13:19:19,437 | INFO | Loading dim_time...
+2026-08-31 13:19:19,473 | INFO | dim_time loaded successfully: 144 rows
+2026-08-31 13:19:19,473 | INFO | Loading dim_grid...
+2026-08-31 13:19:19,474 | INFO | Loading static Milan grid reference...
+2026-08-31 13:19:19,642 | INFO | Milan reference grids found: 10000
+2026-08-31 13:19:20,058 | INFO | dim_grid rows inserted: 9998
+2026-08-31 13:19:20,059 | INFO | Loading fact_network_activity...
+2026-08-31 13:19:20,636 | INFO | dim_time validation: PASS
+2026-08-31 13:19:20,660 | INFO | Timestamp overlap validation: PASS | 144 timestamps matched
+2026-08-31 13:19:20,660 | INFO | Joining fact records to dim_time...
+2026-08-31 13:19:20,958 | INFO | dim_time join: PASS
+2026-08-31 13:19:20,958 | INFO | Reading generated grid_key values from MySQL...
+2026-08-31 13:19:21,045 | INFO | dim_grid database validation: PASS | 9998 grids
+2026-08-31 13:19:21,045 | INFO | Joining fact records to dim_grid...
+2026-08-31 13:19:21,176 | INFO | dim_grid join: PASS
+2026-08-31 13:19:21,261 | INFO | Fact null validation: PASS
+2026-08-31 13:19:21,262 | INFO | SP3 source rows: 1325474
+2026-08-31 13:19:21,262 | INFO | Fact rows after joins: 1325474
+2026-08-31 13:19:21,262 | INFO | FACT ROW COUNT: PASS
+2026-08-31 13:19:21,332 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 13:19:21,332 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 13:19:21,333 | INFO | Writing fact_network_activity to MySQL...
+2026-08-31 13:22:16,030 | INFO | fact_network_activity loaded successfully: 1325474 rows
+2026-08-31 13:22:16,039 | INFO | Creating MySQL indexes...
+2026-08-31 13:22:30,284 | INFO | MySQL indexes created.
+2026-08-31 13:22:30,285 | INFO | Running DE6 warehouse validation...
+2026-08-31 13:22:30,753 | INFO | Source rows: 1325474
+2026-08-31 13:22:30,753 | INFO | Warehouse fact rows: 1325474
+2026-08-31 13:22:30,753 | INFO | FACT ROW COUNT: PASS
+2026-08-31 13:22:30,776 | INFO | Source distinct grids: 9998
+2026-08-31 13:22:30,777 | INFO | Warehouse dim_grid rows: 9998
+2026-08-31 13:22:30,778 | INFO | DIM GRID COUNT: PASS
+2026-08-31 13:22:30,790 | INFO | DIM GRID DUPLICATE CHECK: PASS
+2026-08-31 13:22:30,806 | INFO | FACT GEOMETRY EXCLUSION: PASS
+2026-08-31 13:22:34,258 | INFO | FOREIGN KEY VALIDATION: PASS
+2026-08-31 13:22:35,645 | INFO | FACT GRAIN VALIDATION: PASS
+2026-08-31 13:22:36,350 | INFO | Source total_activity: 696088195.4201999903
+2026-08-31 13:22:36,350 | INFO | Warehouse total_activity: 696088195.4202105999
+2026-08-31 13:22:36,350 | INFO | Difference: 0.0000106096
+2026-08-31 13:22:36,350 | INFO | Allowed tolerance: 0.6960881954
+2026-08-31 13:22:36,350 | INFO | TOTAL ACTIVITY VALIDATION: PASS
+2026-08-31 13:22:50,714 | INFO | Expected top grid: 5161
+2026-08-31 13:22:50,714 | INFO | Warehouse top grid: 5161.0
+2026-08-31 13:22:50,714 | INFO | TOP GRID RECONCILIATION: PASS
+2026-08-31 13:22:50,717 | INFO | INDEX VALIDATION: PASS
+2026-08-31 13:22:50,717 | INFO | ============================================================
+2026-08-31 13:22:50,717 | INFO | ALL DE6 VALIDATIONS PASSED
+2026-08-31 13:22:50,717 | INFO | ============================================================
+2026-08-31 13:22:50,718 | INFO | ============================================================
+2026-08-31 13:22:50,718 | INFO | DE6 MYSQL WAREHOUSE BUILD COMPLETED SUCCESSFULLY
+2026-08-31 13:22:50,718 | INFO | ============================================================
+2026-08-31 13:22:50,719 | INFO | MySQL warehouse connection pool closed.

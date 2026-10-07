@@ -1,0 +1,229 @@
+/* ============================================================
+   MAIN DASHBOARD
+   ============================================================ */
+
+.dashboard-container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f5f7fa;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.dashboard-header {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.header-content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 1.5rem 2rem;
+
+  box-sizing: border-box;
+}
+
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+.dashboard-header p {
+  margin: 0.35rem 0 0;
+
+  font-size: 0.95rem;
+
+  color: #6b7280;
+}
+
+
+/* ============================================================
+   NAVIGATION BAR
+   ============================================================ */
+
+.dashboard-nav {
+  width: 100%;
+  min-height: 60px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 2rem;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  gap: 0.5rem;
+}
+
+
+.dashboard-nav-title {
+  margin-right: 1.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  color: #374151;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   NAVIGATION BUTTONS
+   ============================================================ */
+
+.nav-tab {
+  height: 60px;
+
+  padding: 0 1rem;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  border-bottom: 3px solid transparent;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.nav-tab:hover {
+  color: #111827;
+
+  background: #f9fafb;
+}
+
+
+.nav-tab.active {
+  color: #2563eb;
+
+  border-bottom-color: #2563eb;
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.dashboard-main {
+  flex: 1;
+
+  width: 100%;
+}
+
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 2rem;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.dashboard-footer {
+  width: 100%;
+
+  padding: 1.25rem 2rem;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e5e7eb;
+
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .header-content {
+    padding: 1.25rem;
+  }
+
+
+  .dashboard-header h1 {
+    font-size: 1.4rem;
+  }
+
+
+  .dashboard-nav {
+    padding: 0 1rem;
+
+    overflow-x: auto;
+
+    gap: 0;
+  }
+
+
+  .dashboard-nav-title {
+    margin-right: 0.75rem;
+  }
+
+
+  .nav-tab {
+    padding: 0 0.75rem;
+
+    white-space: nowrap;
+  }
+
+
+  .dashboard-content {
+    padding: 1.25rem;
+  }
+
+
+  .dashboard-footer {
+    padding: 1rem;
+  }
+
+}

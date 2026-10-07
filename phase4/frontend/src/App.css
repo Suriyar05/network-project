@@ -1,0 +1,44 @@
+/* ==========================================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f7f7f8; /* Crisp modern light gray to contrast black cards */
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   APP ROOT LAYOUT
+   ========================================================================== */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px; /* Standard dashboard container width */
+  margin: 0 auto;    /* Centers the layout horizontally */
+  padding: 32px 24px;
+  flex: 1;
+}
+
+/* Optional wrapper if your summary is inside a dashboard view */
+.main-content {
+  width: 100%;
+}

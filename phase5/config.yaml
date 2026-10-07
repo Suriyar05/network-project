@@ -1,0 +1,105 @@
+ml2:
+  input_path: "../../Dataset/hourly_grid_summary.parquet"
+  output_path: "../../Dataset/analytics/ML_LAYER/network_feature_table.parquet"
+  log_path: "../../log/ml2_features.log"
+
+  feature:
+    recent_window_hours: 24
+    baseline_window_hours: 24
+    minimum_history_hours: 48
+
+  columns:
+    timestamp: "timestamp"
+    grid_id: "grid_id"
+    total_activity: "total_activity"
+    internet_activity: "internet_activity"
+
+  output:
+    format: "parquet"
+    mode: "overwrite"
+    
+
+ml3:
+  feature_path: "../../Dataset/analytics/ML_LAYER/network_feature_table.parquet"
+  label_source_path: "../../Dataset/hourly_grid_summary.parquet"
+  np3_alert_path: "../../Dataset/landing/alerts.csv"
+  output_path: "../../Dataset/analytics/ML_LAYER/risk_classifier"
+  log_path: "../../log/ml3_classifier.log"
+
+  split:
+    train_ratio: 0.8
+
+  model:
+    type: "logistic_regression"
+    max_iter: 1000
+
+  label:
+    activity_column: "total_activity"
+    timestamp_column: "timestamp"
+    grid_id_column: "grid_id"
+    horizon_hours: 1
+    positive_percentile: 90
+
+  features:
+    - "avg_activity"
+    - "activity_growth"
+    - "active_hours"
+    - "peak_ratio"
+    - "variability"
+    - "internet_share"
+
+  output:
+    format: "parquet"
+    mode: "overwrite"
+
+ml4:
+  input_path: "../../Dataset/hourly_grid_summary.parquet"
+  np3_alert_path: "../../Dataset/landing/alerts.csv"
+  ml3_prediction_path: "../../Dataset/analytics/ML_LAYER/risk_classifier/predictions.parquet"
+  output_path: "../../Dataset/analytics/ML_LAYER/anomaly_detection"
+  log_path: "../../log/ml4_anomaly.log"
+
+  timestamp_column: "timestamp"
+  activity_column: "total_activity"
+
+  anomaly:
+    percentage_threshold: 50
+
+  output:
+    format: "parquet"
+    mode: "overwrite"
+
+ml6:
+  feature_path: "../../Dataset/analytics/ML_LAYER/network_feature_table.parquet"
+  model_path: "../../Dataset/analytics/ML_LAYER/risk_classifier/risk_classifier.joblib"
+  output_path: "../../Dataset/analytics/ML_LAYER/network_risk_scores"
+  report_path: "../../Dataset/analytics/ML_LAYER/top_20_operational_attention.parquet"
+  log_path: "../../log/ml6_batch_scoring.log"
+
+  model:
+    version: "risk-classifier-logistic-regression-v1"
+
+  features:
+    - "avg_activity"
+    - "activity_growth"
+    - "active_hours"
+    - "peak_ratio"
+    - "variability"
+    - "internet_share"
+
+  columns:
+    grid_id: "grid_id"
+    timestamp: "feature_timestamp"
+    risk_score: "risk_score"
+    risk_level: "risk_level"
+    model_version: "model_version"
+
+  scoring:
+    threshold: 0.5
+
+  report:
+    top_n: 20
+
+  output:
+    format: "parquet"
+    mode: "overwrite"

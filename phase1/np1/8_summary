@@ -1,0 +1,13 @@
+# NP1 Data Profiling Summary
+
+**To: Network Analytics Team**
+
+* **Dataset structure and time:** The supplied daily telecom activity file contains **[ROW COUNT] raw rows** covering **[START TIMESTAMP] to [END TIMESTAMP]**. There are exactly **24 distinct hourly timestamps**, with consecutive intervals separated by one hour, confirming the expected hourly cadence.
+
+* **Geographic coverage and raw grain:** The file contains **[UNIQUE GRID COUNT] distinct grid_id values**, all within the valid range of 1–10,000. The raw grain is **timestamp + grid_id + country_code**; for example, grid **[GRID ID]** at **[TIMESTAMP]** appears in multiple rows with country-code categories **[CATEGORIES]**.
+
+* **Data quality:** The profiling identified **[MISSING GRID COUNT] missing grid_id values**, **[MISSING TIMESTAMP COUNT] missing timestamps**, and the following activity-field null/blank counts: **[NULL COUNTS]**. No exact duplicate rows and no negative activity values were found in the supplied file.
+
+* **Activity measures:** The dataset contains SMS, call and internet **activity measures**. The derived fields `total_sms`, `total_calls`, and the project-defined composite `total_activity` were calculated for profiling. These values represent proportional activity measures rather than literal message counts, call counts or megabytes.
+
+* **Activity concentration:** The busiest hourly window was **[BUSIEST TIMESTAMP]**, with total activity of **[BUSIEST HOUR ACTIVITY]**, while grid **[BUSIEST GRID]** recorded the highest total activity of **[BUSIEST GRID ACTIVITY]** during the supplied daily window. These results indicate activity concentration and should be treated as operational activity signals rather than evidence of network congestion.
